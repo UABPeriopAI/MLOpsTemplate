@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.rc.uab.edu/anes_ai/cookiecutter-segmentation.git
+git remote add origin https://github.com/UABPeriopAI/MLOpsTemplate/
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.rc.uab.edu/anes_ai/cookiecutter-segmentation/-/settings/integrations)
+- [ ] [Set up project integrations](https://github.com/UABPeriopAI/MLOpsTemplate/)
 
 ## Collaborate with your team
 
