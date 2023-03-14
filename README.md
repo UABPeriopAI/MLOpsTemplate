@@ -22,4 +22,5 @@ pip install cookiecutter
 ## Usage
 Once cookiecutter is installed, you can call this repository directly from the command line with the cookiecutter API.  This cookiecutter is designed to install the codebase first and it automatically follows up with the creation of the data structure.  Once the data directory ahs been created, relocate it elsewhere - do not check in the data (MLFlow will handle the data that). An example of how to create a new project from this template looks like:
 ~~~
+cookiecutter [https://gitlab.rc.uab.edu/anes_ai/cookiecutter-segmentation](https://github.com/UABPeriopAI/MLOpsTemplate) --checkout main --directory cc-codebase
 ~~~
