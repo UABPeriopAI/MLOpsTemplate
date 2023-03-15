@@ -2,7 +2,10 @@
 This repository contains a [cookiecutter template](https://cookiecutter.readthedocs.io/en/stable/) for deploying a MLOps infrastructure, brought to you by the [Perioperative Data Science Team at the University of Alabama, Birmingham](https://sites.uab.edu/periop-datascience/).
 
 ## Setup
-To use this template, cookiecutter must first be installed. You can test this by typing the following in the command line (e.g. Windows Subsystem Linux): 
+
+If you are working in a Windows environment, first [install Windows Subsystem](https://learn.microsoft.com/en-us/windows/wsl/install) for Linux 2 (WSL 2).  This streamlines installation and makes porting projects to cloud or other environments easier.  
+
+In order to use this template, the cookiecutter package must first be installed. You can test this by typing the following in the WSL 2 command line: 
 ~~~
 cookiecutter --version
 ~~~ 
@@ -24,3 +27,5 @@ Once cookiecutter is installed, you can call this repository directly from the c
 ~~~
 cookiecutter [https://gitlab.rc.uab.edu/anes_ai/cookiecutter-segmentation](https://github.com/UABPeriopAI/MLOpsTemplate) --checkout main --directory cc-codebase
 ~~~
+Executing this command will initiate prompts for you to enter project specific information.  Our template has the following inputs for a new project:
+
