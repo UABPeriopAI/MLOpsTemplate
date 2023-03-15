@@ -3,8 +3,8 @@
 cd {{cookiecutter.project_name}}
 git init
 
-git config --global user.name "{{cookiecutter.author}}"
-git config --global user.email "{{cookiecutter.author_email}}"
+git config user.name "{{cookiecutter.author}}"
+git config user.email "{{cookiecutter.author_email}}"
 
 git remote add origin {{cookiecutter.repository_url}}
 git fetch
@@ -16,4 +16,4 @@ git branch -M master feature/initialize_template
 git push origin HEAD
 
 
-cookiecutter https://gitlab.rc.uab.edu/anes_ai/cookiecutter-segmentation --checkout develop --directory="cc-data"
+cookiecutter https://github.com/UABPeriopAI/MLOpsTemplate --checkout main --directory="cc-data"
