@@ -32,7 +32,7 @@ cookiecutter https://github.com/UABPeriopAI/MLOpsTemplate --checkout main --dire
 ~~~
 Executing this command will initiate prompts for you to enter project specific information.  Our template has the following inputs for a new project (with default values in parenthesis):
 #### cc-codebase
-- [ ] Project Name () - Name of the new project
+- [ ] Project Name (default_proj) - Name of the new project
 - [ ] Author Name () - Name of the person creating the project 
 - [ ] Description () - Brief description of what the software is intended to do
 - [ ] Author Email () - Be sure to use the email connected to your version control account
@@ -42,4 +42,6 @@ Executing this command will initiate prompts for you to enter project specific i
 #### cc-data
 - [ ] Data directory name (DATASCI)
 
-Once the data directory has been created (Defaults to DATASCI), relocate it elsewhere (e.g., a network attached storage) - do not check in the data (MLFlow will handle the data that).
+Once the data directory has been created (Defaults to DATASCI), relocate it elsewhere (e.g., a network attached storage) - do not check in the data (MLFlow will handle the data).
+
+Disclosure: This template may not work out of the box in every environment, but the contents of the template can be modified, the Docker parameters in particular, to get it working. 
