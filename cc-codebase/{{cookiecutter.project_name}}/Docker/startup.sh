@@ -2,9 +2,6 @@
 
 git flow init -d
 
-git config --global user.name {{cookiecutter.author}}
-git config --global user.email {{cookiecutter.author_email}}
-
 #to test the package as you go
 cd src/
 python3 -m pip install pip setuptools wheel

@@ -47,6 +47,7 @@ logging_config = {
             "backupCount": 10,
             "formatter": "detailed",
             "level": logging.INFO,
+            "mode": "a+", 
         },
         "error": {
             "class": "logging.handlers.RotatingFileHandler",
@@ -55,6 +56,7 @@ logging_config = {
             "backupCount": 10,
             "formatter": "detailed",
             "level": logging.ERROR,
+            "mode": "a+", 
         },
     },
     "root": {

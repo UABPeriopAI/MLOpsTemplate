@@ -4,7 +4,7 @@ cd {{cookiecutter.project_name}}
 git init
 
 git config --global user.name "{{cookiecutter.author}}"
-git config --global user.email "{{cookiecutter.email}}"
+git config --global user.email "{{cookiecutter.author_email}}"
 
 git remote add origin {{cookiecutter.repository_url}}
 git fetch
