@@ -32,14 +32,14 @@ cookiecutter https://github.com/UABPeriopAI/MLOpsTemplate --checkout main --dire
 ~~~
 Executing this command will initiate prompts for you to enter project specific information.  Our template has the following inputs for a new project (with default values in parenthesis):
 #### cc-codebase
-- [] Project Name () - Name of the new project
-- [] Author Name () - Name of the person creating the project 
-- [] Description () - Brief description of what the software is intended to do
-- [] Author Email () - Be sure to use the email connected to your version control account
-- [] Repository URL () - The empty git Repository URL for the new project from step 1
-- [] Data Directory () - The folder where you plan to put the data (eventually we will move it there automatically, but for now this just updates the devcontainer.json so the Docker container knows where to find the data)
+- [ ] Project Name () - Name of the new project
+- [ ] Author Name () - Name of the person creating the project 
+- [ ] Description () - Brief description of what the software is intended to do
+- [ ] Author Email () - Be sure to use the email connected to your version control account
+- [ ] Repository URL () - The empty git Repository URL for the new project from step 1
+- [ ] Data Directory () - The folder where you plan to put the data (eventually we will move it there automatically, but for now this just updates the devcontainer.json so the Docker container knows where to find the data)
 
 #### cc-data
-- [] Data directory name (DATASCI)
+- [ ] Data directory name (DATASCI)
 
 Once the data directory has been created (Defaults to DATASCI), relocate it elsewhere (e.g., a network attached storage) - do not check in the data (MLFlow will handle the data that).
