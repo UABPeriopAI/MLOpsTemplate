@@ -32,7 +32,7 @@ cookiecutter https://github.com/UABPeriopAI/MLOpsTemplate --checkout main --dire
 ~~~
 Executing this command will initiate prompts for you to enter project specific information.  Our template has the following inputs for a new project (with default values in parenthesis):
 #### cc-codebase
-- [ ] Project Name () - Name of the new project
+- [ ] Project Name (default_proj) - Name of the new project
 - [ ] Author Name () - Name of the person creating the project 
 - [ ] Description () - Brief description of what the software is intended to do
 - [ ] Author Email () - Be sure to use the email connected to your version control account
