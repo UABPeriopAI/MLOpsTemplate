@@ -1,4 +1,4 @@
-# MLOpsTemplate
+# MLOps: A Template Framework for Traceable Machine Learning and Artificial Intelligence
 This repository contains a [cookiecutter template](https://cookiecutter.readthedocs.io/en/stable/) for deploying a MLOps infrastructure, brought to you by the [Perioperative Data Science Team at the University of Alabama, Birmingham](https://sites.uab.edu/periop-datascience/).
 
 ## Setup
