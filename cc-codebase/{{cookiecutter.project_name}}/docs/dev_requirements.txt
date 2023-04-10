@@ -20,9 +20,6 @@ optuna
 jupyter
 pillow
 opencv-python
-mne
 mpld3
-mne-icalabel
 scipy
 tensorflow-addons
-neurokit2
