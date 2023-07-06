@@ -4,5 +4,6 @@
 	"description":"",
 	"author_email":"",
 	"repository_url":"",
-	"data_dir":""
+	"data_dir":"",
+	"data_directory_name":"DATASCI"
 }

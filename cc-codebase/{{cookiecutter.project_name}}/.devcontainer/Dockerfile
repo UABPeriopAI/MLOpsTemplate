@@ -15,13 +15,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends git-flow \
     && apt-get -y install --no-install-recommends cmake
 
-# Setup R
-RUN apt update \
-    && apt install -y dirmngr gnupg apt-transport-https ca-certificates software-properties-common \
-    && apt install r-base -y 
-
-RUN chown -R vscode:vscode /usr/local/lib/R/site-library
-
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
  COPY docs/dev_requirements.txt /tmp/pip-tmp/
  RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/dev_requirements.txt \
