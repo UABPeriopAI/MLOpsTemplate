@@ -1,6 +1,5 @@
 #!/bin/sh
 
-cd {{cookiecutter.project_name}}
 git init
 
 git config user.name "{{cookiecutter.author}}"
@@ -13,6 +12,7 @@ git add .
 git commit -m 'initializing from cookiecutter'
 git push -u origin master
 git branch -M master feature/initialize_template
+git branch --remotes --delete  origin/master
 git push origin HEAD
 
 cd ..
