@@ -16,4 +16,4 @@ git branch -M master feature/initialize_template
 git push origin HEAD
 
 
-cookiecutter https://github.com/UABPeriopAI/MLOpsTemplate --checkout main --directory="cc-data"
+cookiecutter https://github.com/UABPeriopAI/MLOpsTemplate --checkout main --directory="cc-data" -o {{cookiecutter.data_dir}}
