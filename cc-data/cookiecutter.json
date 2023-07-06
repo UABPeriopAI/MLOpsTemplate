@@ -1,4 +1,5 @@
 {
-	"data_directory_name":"DATASCI",
-	"data_dir": ""
+	"project_name":"default_proj",
+	"data_dir": "",
+	"data_directory_name":"DATASCI"
 }
