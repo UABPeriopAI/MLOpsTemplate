@@ -26,7 +26,7 @@ pip install cookiecutter
 1. Before using the cookiecutter, create a new, empty repository for your project - you'll need the URL shortly.
 
 
-2. With cookiecutter, you can call this repository directly from the command line.  This cookiecutter is designed to install the codebase first and it subsequently creates the data structure automatically.   An example of how to create a new project from this template looks like:
+2. With cookiecutter, you can call this repository directly from the command line.  This cookiecutter is designed to install the codebase and it automatically creates and relocates the data structure.   An example of how to create a new project from this template looks like:
 ~~~
 cookiecutter https://github.com/UABPeriopAI/MLOpsTemplate --checkout main --directory cc-codebase
 ~~~
@@ -38,10 +38,8 @@ Executing this command will initiate prompts for you to enter project specific i
 - [ ] Author Email () - Be sure to use the email connected to your version control account
 - [ ] Repository URL () - The empty git Repository URL for the new project from step 1
 - [ ] Data Directory () - The folder where you plan to put the data (eventually we will move it there automatically, but for now this just updates the devcontainer.json so the Docker container knows where to find the data)
-
-#### cc-data
 - [ ] Data directory name (DATASCI)
 
-Once the data directory has been created (Defaults to DATASCI), relocate it elsewhere (e.g., a network attached storage) - do not check in the data (MLFlow will handle the data).
+The data directory will be automatically created and moved to Data_Directory/Data_Directory_name/
 
 Disclosure: This template may not work out of the box in every environment, but the contents of the template can be modified, the Docker parameters in particular, to get it working. 
