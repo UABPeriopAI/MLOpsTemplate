@@ -34,7 +34,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ## License
 
-This project is licensed under the terms of the GPL license. See the [LICENSE](LICENSE) file for the full license text.
+This project is licensed under the terms of the GPL license. See the [LICENSE](../LICENSE) file for the full license text.
 
 ## Contact
 
