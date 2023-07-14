@@ -1,8 +1,8 @@
 
 # mkdocs.yml
-site_name: FILL OUT
-site_url: https://sites.uab.edu/periop-datascience/
-repo_url: FILL OUT
+site_name: {{cookiecutter.project_name}}
+site_url: FILL OUT
+repo_url: {{cookiecutter.repo_url}}
 nav:
   - Home: index.md
   - workflows:
