@@ -1,4 +1,4 @@
-# STREAM: Systematic Template for Reliable and Efficient Automation in Machine learning
+# STREAM: Systematic Template for Reliable and Efficient Artificial intelligence and Machine learning
 
 STREAM is a powerful MLOps template designed to facilitate collaborative code development, automate processes, and ensure data traceability in machine learning workflows.
 
