@@ -17,4 +17,3 @@ git push origin HEAD
 
 
 mv {{cookiecutter.data_directory_name}} {{cookiecutter.data_dir}}
-#cookiecutter https://github.com/UABPeriopAI/MLOpsTemplate --checkout rcg-uab-patch-1 -o {{cookiecutter.data_dir}} --directory="cc-data" 
