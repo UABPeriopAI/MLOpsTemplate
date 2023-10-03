@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 
 @app.command()
 def process(
-    args_pr0: str = "config/args_pro.json",
+    args_pro: str = "config/args_pro.json",
     experiment_name: str = "process",
     run_name: str = "process",
     test_run: bool = False,
