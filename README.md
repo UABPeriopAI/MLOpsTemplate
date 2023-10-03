@@ -17,7 +17,7 @@ The output should look something like the following:
 'Cookiecutter 1.7.3 from /home/rgodwin/anaconda3/lib/python3.6/site-packages (Python 3.6)'
 ```
 
-If it not installed, you can do so with Pip:
+If it's not already installed, you can do so with Pip:
 ~~~
 pip install cookiecutter
 ~~~

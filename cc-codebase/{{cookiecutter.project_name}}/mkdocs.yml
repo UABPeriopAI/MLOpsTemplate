@@ -2,7 +2,7 @@
 # mkdocs.yml
 site_name: {{cookiecutter.project_name}}
 site_url: FILL OUT
-repo_url: {{cookiecutter.repo_url}}
+repo_url: {{cookiecutter.repository_url}}
 nav:
   - Home: index.md
   - workflows:
