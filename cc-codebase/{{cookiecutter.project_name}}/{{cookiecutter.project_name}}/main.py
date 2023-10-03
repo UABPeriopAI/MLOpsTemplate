@@ -14,20 +14,21 @@ warnings.filterwarnings("ignore")
 
 @app.command()
 def process(
-    args_fp: str = "config/args_meg_preproc.json",
+    args_pr0: str = "config/args_pro.json",
     experiment_name: str = "process",
     run_name: str = "process",
     test_run: bool = False,
 ) -> None:
     #processing code goes here (e.g., model inference):
 
-    #Log preproccesing
+    #Log
     logger.info("✅ sucessfully processed data")
     mlflow.set_experiment(experiment_name)
+    #Example MLFlow call
     with mlflow.start_run(run_name=run_name) as run:
         print_info.print_run_info(run)
         run_id = mlflow.active_run().info.run_id
-        mlflow.log_params(args)
+        mlflow.log_params(args_pro)
         #mlflow.log_param("output_filepath", csv_output_path)
 
 
@@ -35,21 +36,21 @@ def process(
 
 @app.command()
 def train(
-    args_fp: str = "config/arg.json",
-    experiment_name: str = "Train",
+    args_tr: str = "config/args_tr.json",
+    experiment_name: str = "training",
     test_run: bool = False,
 ) -> None:
     if not test_run:
         mlflow.set_experiment(experiment_name)
         with mlflow.start_run(run_name=run_name):
             run_id = mlflow.active_run().info.run_id
-            mlflow.log_params(args)
+            mlflow.log_params(args_tr)
 
 
 @app.command()
 def preprocess(
-    experiment_name: str = 'experiment_name',
-    args_ecg: str = "config/args.json",
+    experiment_name: str = 'preprocessing',
+    args_pre: str = "config/args_pre.json",
     run_name: str = "Preprocess",
     test_run: bool = True,
 ):
@@ -61,14 +62,14 @@ def preprocess(
     with mlflow.start_run(run_name=run_name) as run:
         print_info.print_run_info(run)
         run_id = mlflow.active_run().info.run_id
-        mlflow.log_params(args)
+        mlflow.log_params(args_pre)
         #mlflow.log_param("output_filepath", csv_output_path)
 
 
 @app.command()
 def evaluate(
-    args_rr: str = "config/args.json",
-    experiment_name: str = "Evaluation",
+    args_eval: str = "config/args_eval.json",
+    experiment_name: str = "evaluation",
     test_run: bool = False,
 ):
     raise(NotImplementedError)
