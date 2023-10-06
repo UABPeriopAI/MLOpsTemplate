@@ -19,6 +19,7 @@ RESULTS_DIR = Path(DATA_DIR, "results")
 
 #Assets
 #Add assets here as needed.
+EXAMPLE_OUTPUT = Path(INTERMEDIATE_DIR, "Example_Output.csv")
 
 # MLFlow model registry
 mlflow.set_tracking_uri("http://localhost:5000")
