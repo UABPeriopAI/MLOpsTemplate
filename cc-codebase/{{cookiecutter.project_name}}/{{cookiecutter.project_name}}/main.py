@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 
 @app.command()
 def process(
-    args_pro: str = "config/args_pro.json",
+    args_pro: str = "config/args_process.json",
     experiment_name: str = "process",
     run_name: str = "process",
     test_run: bool = False,
@@ -29,14 +29,10 @@ def process(
         print_info.print_run_info(run)
         run_id = mlflow.active_run().info.run_id
         mlflow.log_params(args_pro)
-        #mlflow.log_param("output_filepath", csv_output_path)
-
-
-
 
 @app.command()
 def train(
-    args_tr: str = "config/args_tr.json",
+    args_tr: str = "config/args_train.json",
     experiment_name: str = "training",
     test_run: bool = False,
 ) -> None:
@@ -50,7 +46,7 @@ def train(
 @app.command()
 def preprocess(
     experiment_name: str = 'preprocessing',
-    args_pre: str = "config/args_pre.json",
+    args_pre: str = "config/args_preprocess.json",
     run_name: str = "Preprocess",
     test_run: bool = True,
 ):
@@ -68,7 +64,6 @@ def preprocess(
 
 @app.command()
 def evaluate(
-    args_eval: str = "config/args_eval.json",
     experiment_name: str = "evaluation",
     test_run: bool = False,
 ):
