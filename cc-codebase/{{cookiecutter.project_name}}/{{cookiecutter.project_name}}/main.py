@@ -59,7 +59,7 @@ def process(
     #Example MLFlow call
     if not test_run:
         with mlflow.start_run(run_name=run_name) as run:
-                    run_id = mlflow.active_run().info.run_id
+            run_id = mlflow.active_run().info.run_id
             mlflow.log_params(args_pro)
 
 @app.command()
