@@ -4,22 +4,6 @@ from typing import Dict, List
 import numpy as np
 import pandas as pd
 from sklearn.metrics import precision_recall_fscore_support
-from snorkel.slicing import PandasSFApplier, slicing_function
-
-
-@slicing_function()
-def nlp_cnn(x):
-    """NLP Projects that use convolution."""
-    nlp_projects = "natural-language-processing" in x.tag
-    convolution_projects = "CNN" in x.text or "convolution" in x.text
-    return nlp_projects and convolution_projects
-
-
-@slicing_function()
-def short_text(x):
-    """Projects with short titles and descriptions."""
-    return len(x.text.split()) < 8  # less than 8 words
-
 
 def get_slice_metrics(y_true: np.ndarray, y_pred: np.ndarray, slices: np.recarray) -> Dict:
     """Generate metrics for slices of data.
@@ -81,9 +65,3 @@ def get_metrics(
             "f1": class_metrics[2][i],
             "num_samples": np.float64(class_metrics[3][i]),
         }
-
-    # Slice metrics
-    if df is not None:
-        slices = PandasSFApplier([nlp_cnn, short_text]).apply(df)
-        metrics["slices"] = get_slice_metrics(y_true=y_true, y_pred=y_pred, slices=slices)
-    return metrics
