@@ -13,9 +13,8 @@ warnings.filterwarnings("ignore")
 
 @app.command()
 def preprocess(
-    experiment_name: str = 'preprocessing',
+    experiment_name: str = 'Preprocessing',
     args_pre: str = "config/args_preprocess.json",
-    run_name: str = "Preprocess",
     test_run: bool = True,
 ):
     #Preprocessing code goes here:
@@ -25,8 +24,7 @@ def preprocess(
     if not test_run: 
             
         mlflow.set_experiment(experiment_name)
-        with mlflow.start_run(run_name=run_name) as run:
-            print_info.print_run_info(run)
+        with mlflow.start_run() as run:
             run_id = mlflow.active_run().info.run_id
             mlflow.log_params(args_pre)
             mlflow.log_param("run_id", run_id)
@@ -40,7 +38,7 @@ def train(
 ) -> None:
     if not test_run:
         mlflow.set_experiment(experiment_name)
-        with mlflow.start_run(run_name=run_name):
+        with mlflow.start_run():
             run_id = mlflow.active_run().info.run_id
             mlflow.log_params(args_tr)
 
