@@ -21,8 +21,7 @@ def preprocess(
 
     #Log preproccesing
     logger.info("✅ sucessfully preprocessed data")
-    if not test_run: 
-            
+    if not test_run:     
         mlflow.set_experiment(experiment_name)
         with mlflow.start_run() as run:
             run_id = mlflow.active_run().info.run_id

@@ -15,6 +15,5 @@ black==22.6.0
 flake8==5.0.2
 typer==0.6.1
 streamlit
-mlflow
 tensorflow-addons
 jupyter
