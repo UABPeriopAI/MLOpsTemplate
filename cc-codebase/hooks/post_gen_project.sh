@@ -1,23 +1,30 @@
 #!/bin/sh
 
+# Define your variables here
+var1="{{cookiecutter.project_name}}"
+var2="{{cookiecutter.author}}"
+var3="{{cookiecutter.author_email}}"
+var4="{{cookiecutter.repository_url}}"
+var5="{{cookiecutter.data_dir}}"
+var6="{{cookiecutter.data_directory_name}}"
 
-variables=({{cookiecutter.project_name}} {{cookiecutter.author}} \
-    {{cookiecutter.author_email}} {{cookiecutter.repository_url}} \
-    {{cookiecutter.data_dir}} {{cookiecutter.data_directory_name}})
+# Function to check if a variable is empty
+check_empty() {
+    var_name=$1
+    eval var_value=\$$var_name
 
-# Iterate over the list and check each variable
-for var in "${variables[@]}"; do
-    # Use indirect variable reference to get the value of each named variable
-    value="${!var}"
-    
-    # Check if the value is empty
-    if [ -z "$value" ]; then
-        echo "WARNING: required input $var is empty"
+    if [ -z "$var_value" ]; then
+        echo "$var_name is empty"
+        exit 1
     else
-        echo "$var has the value: $value"
+        echo "$var_name has the value: $var_value"
     fi
-done
+}
 
+# List your variables
+for var in var1 var2 var3 var4 var5 var6; do
+    check_empty $var
+done
 
 git init
 
