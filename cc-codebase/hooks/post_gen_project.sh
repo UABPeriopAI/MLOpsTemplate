@@ -1,12 +1,12 @@
 #!/bin/sh
 
 # Define your variables here
-var1="{{cookiecutter.project_name}}"
-var2="{{cookiecutter.author}}"
-var3="{{cookiecutter.author_email}}"
-var4="{{cookiecutter.repository_url}}"
-var5="{{cookiecutter.data_dir}}"
-var6="{{cookiecutter.data_directory_name}}"
+project_name="{{cookiecutter.project_name}}"
+author="{{cookiecutter.author}}"
+author_email="{{cookiecutter.author_email}}"
+repository_url="{{cookiecutter.repository_url}}"
+data_dir="{{cookiecutter.data_dir}}"
+data_directory_name="{{cookiecutter.data_directory_name}}"
 
 # Function to check if a variable is empty
 check_empty() {
@@ -22,7 +22,7 @@ check_empty() {
 }
 
 # List your variables
-for var in var1 var2 var3 var4 var5 var6; do
+for var in project_name author author_email repository_url data_dir data_directory_name; do
     check_empty $var
 done
 
