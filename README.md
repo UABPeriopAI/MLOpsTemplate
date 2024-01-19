@@ -30,16 +30,20 @@ pip install cookiecutter
 ~~~
 cookiecutter https://github.com/UABPeriopAI/MLOpsTemplate --checkout main --directory cc-codebase
 ~~~
-Executing this command will initiate prompts for you to enter project specific information.  Our template has the following inputs for a new project (with default values in parenthesis):
+Executing this command will initiate prompts for you to enter project specific information.   Our template has the following inputs for a new project (with default values in parenthesis):
 #### cc-codebase
-- [ ] Project Name (default_proj) - Name of the new project
-- [ ] Author Name () - Name of the person creating the project 
+- [ ] Project Name* (default_proj) - Name of the new project.  This paramter is used in a number of places and should be a title that the user can use to readily identify the project.
+- [ ] Author Name* () - Name of the person creating the project.  This will be used in the setup.py file and in git commit messages.
 - [ ] Description () - Brief description of what the software is intended to do
-- [ ] Author Email () - Be sure to use the email connected to your version control account
-- [ ] Repository URL () - The empty git Repository URL for the new project from step 1
-- [ ] Data Directory () - The folder where you plan to put the data (eventually we will move it there automatically, but for now this just updates the devcontainer.json so the Docker container knows where to find the data)
-- [ ] Data directory name (DATASCI)
+- [ ] Author Email* () - Be sure to use the email connected to your version control account
+- [ ] Repository URL* () - The empty git Repository URL for the new project from step 1
+- [ ] Data Directory* () - The folder where you plan to put the data (eventually we will move it there automatically, but for now this just updates the devcontainer.json so the Docker container knows where to find the data)
+- [ ] Data directory* name (DATASCI)
 
+Many default values are left blank, because we make no presumptions about the specific information for a project.
 The data directory will be automatically created and moved to Data_Directory/Data_Directory_name/
+
+We encourage users to provide input for all fields, although *Description* is not requried for the template to deploy correctly.
+* - Indicates a field that is required for the template to deploy as intended.  
 
 Disclosure: This template may not work out of the box in every environment, but the contents of the template can be modified, the Docker parameters in particular, to get it working. 

@@ -1,5 +1,24 @@
 #!/bin/sh
 
+
+variables=({{cookiecutter.project_name}} {{cookiecutter.author}} \
+    {{cookiecutter.author_email}} {{cookiecutter.repository_url}} \
+    {{cookiecutter.data_dir}} {{cookiecutter.data_directory_name}})
+
+# Iterate over the list and check each variable
+for var in "${variables[@]}"; do
+    # Use indirect variable reference to get the value of each named variable
+    value="${!var}"
+    
+    # Check if the value is empty
+    if [ -z "$value" ]; then
+        echo "WARNING: required input $var is empty"
+    else
+        echo "$var has the value: $value"
+    fi
+done
+
+
 git init
 
 git config user.name "{{cookiecutter.author}}"
