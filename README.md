@@ -44,6 +44,6 @@ Many default values are left blank, because we make no presumptions about the sp
 The data directory will be automatically created and moved to Data_Directory/Data_Directory_name/
 
 We encourage users to provide input for all fields, although *Description* is not requried for the template to deploy correctly.
-* - Indicates a field that is required for the template to deploy as intended.  
+A * next to the parameter indicates a field that is required for the template to deploy as intended.  
 
 Disclosure: This template may not work out of the box in every environment, but the contents of the template can be modified, the Docker parameters in particular, to get it working. 
