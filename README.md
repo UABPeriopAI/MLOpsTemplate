@@ -46,4 +46,8 @@ The data directory will be automatically created and moved to Data_Directory/Dat
 We encourage users to provide input for all fields, although *Description* is not requried for the template to deploy correctly.
 A * next to the parameter indicates a field that is required for the template to deploy as intended.  
 
+##### Troubleshooting
+Depending on the repository for the new project, users may have to setup programmatic access to the repository.  For example, GitHub requires use of a personal access token to programmatically access repositories.  Users can follow the instructions [here](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed)
+to setup a personal access token on GitHub and integrate it into their operating system (via Windows Credential Manager, for example.)
+
 Disclosure: This template may not work out of the box in every environment, but the contents of the template can be modified, the Docker parameters in particular, to get it working. 
