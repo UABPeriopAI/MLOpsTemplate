@@ -3,7 +3,7 @@ This repository contains a [cookiecutter template](https://cookiecutter.readthed
 
 ## Setup
 
-If you are working in a Windows environment, first [install Windows Subsystem](https://learn.microsoft.com/en-us/windows/wsl/install) for Linux 2 (WSL 2).  This streamlines installation and makes porting projects to cloud or other environments easier.  
+If you are working in a Windows environment, first [install Windows Subsystem](https://learn.microsoft.com/en-us/windows/wsl/install) for Linux 2 (WSL 2).  This streamlines installation and makes porting projects to cloud or other environments easier.  See the project Wiki for additional installation and setup guidance.
 
 In order to use this template, the cookiecutter package must first be installed. You can test this by typing the following in the WSL 2 command line: 
 ~~~
