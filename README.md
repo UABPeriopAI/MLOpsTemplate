@@ -42,4 +42,6 @@ Executing this command will initiate prompts for you to enter project specific i
 
 The data directory will be automatically created and moved to Data_Directory/Data_Directory_name/
 
+Note: The post_gen_project.sh script generates an error even after successful deployment of the template.  The contents of the template are pushed to a new branch "feature/initialize_template" which is ready to merge to main and there will be a remenant master branch that can be deleted.
+
 Disclosure: This template may not work out of the box in every environment, but the contents of the template can be modified, the Docker parameters in particular, to get it working. 
