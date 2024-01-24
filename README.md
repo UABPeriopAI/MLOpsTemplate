@@ -30,7 +30,7 @@ pip install cookiecutter
 ~~~
 cookiecutter https://github.com/UABPeriopAI/MLOpsTemplate --checkout main --directory cc-codebase
 ~~~
-Executing this command will initiate prompts for you to enter project specific information.   Our template has the following inputs for a new project (with default values in parenthesis):
+Executing this command will initiate prompts for you to enter project specific information.   Our template has the following inputs for a new project (with default values in parenthesis)
 #### cc-codebase
 - [ ] Project Name* (default_proj) - Name of the new project.  This paramter is used in a number of places and should be a title that the user can use to readily identify the project.
 - [ ] Author Name* () - Name of the person creating the project.  This will be used in the setup.py file and in git commit messages.
@@ -40,11 +40,14 @@ Executing this command will initiate prompts for you to enter project specific i
 - [ ] Data Directory* () - The folder where you plan to put the data (eventually we will move it there automatically, but for now this just updates the devcontainer.json so the Docker container knows where to find the data)
 - [ ] Data directory* name (DATASCI)
 
-Many default values are left blank, because we make no presumptions about the specific information for a project.
-The data directory will be automatically created and moved to Data_Directory/Data_Directory_name/
+Many default values are left blank, because we make no presumptions about the specific information for a project. We encourage users to provide input for all fields, although *Description* is not requried for the template to deploy correctly. A * next to the parameter indicates a field that is required for the template to deploy as intended. 
 
-We encourage users to provide input for all fields, although *Description* is not requried for the template to deploy correctly.
-A * next to the parameter indicates a field that is required for the template to deploy as intended.  
++ After running the command, the contents of the template are pushed to a new repository branch "feature/initialize_template" which is ready to merge to main. Additionally, there will be a remenant master branch that can be deleted (cookiecutter creates a master branch, but out group prefers the name 'main'.)
+
++ The data directory will be automatically created and moved to Data_Directory/Data_Directory_name/
+
++ *Note:* The post_gen_project.sh script generates an error even after successful deployment of the template.  
+
 
 ##### Troubleshooting
 Depending on the repository for the new project, users may have to setup programmatic access to the repository.  For example, GitHub requires use of a personal access token to programmatically access repositories.  Users can follow the instructions [here](https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed)
