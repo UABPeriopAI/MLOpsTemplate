@@ -40,13 +40,14 @@ Executing this command will initiate prompts for you to enter project specific i
 - [ ] Data Directory* () - The folder where you plan to put the data (eventually we will move it there automatically, but for now this just updates the devcontainer.json so the Docker container knows where to find the data)
 - [ ] Data directory* name (DATASCI)
 
-Many default values are left blank, because we make no presumptions about the specific information for a project. We encourage users to provide input for all fields, although *Description* is not requried for the template to deploy correctly. A * next to the parameter indicates a field that is required for the template to deploy as intended. 
+A * next to the parameter indicates a field that is required for the template to deploy as intended. Many default values are left blank, because we make no presumptions about the specific information for a project. We encourage users to provide input for all fields, although *Description* is not requried for the template to deploy correctly. 
 
-+ After running the command, the contents of the template are pushed to a new repository branch "feature/initialize_template" which is ready to merge to main. Additionally, there will be a remenant master branch that can be deleted (cookiecutter creates a master branch, but out group prefers the name 'main'.)
+##### After running the cookiecutter
++ The contents of the template are pushed to a new repository branch "feature/initialize_template" which is ready to merge to main. Additionally, there will be a remenant master branch that can be deleted (cookiecutter creates a master branch, but out group prefers the name 'main'.)
 
 + The data directory will be automatically created and moved to Data_Directory/Data_Directory_name/
 
-+ *Note:* The post_gen_project.sh script generates an error even after successful deployment of the template.  
++ *Note:* The post_gen_project.sh script sometimes generates an error even after successful deployment of the template.  
 
 
 ##### Troubleshooting
